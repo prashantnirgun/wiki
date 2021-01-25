@@ -1,10 +1,8 @@
+---
+sidebar: auto
+---
+
 # VS-Code
-
-## Download
-
-## Install
-
-## Shortcuts
 
 ## Plugins
 
@@ -51,6 +49,7 @@
 - Format on Save : Autoformat on save action
 - Font Family : Cascadia Code
 - Font Ligatures : You need to go to Settings.json and set to true
+- Open Files : workbench.editor.enablePreview = false
 
 ## Shortcuts
 
@@ -69,3 +68,5 @@
 - [Freecode](https://www.youtube.com/watch?v=WPqXP_kLzpo&t=1549s)
 - [Cascadia Code Font](https://github.com/microsoft/cascadia-code)
 - [VS Code Tricks & Tips](https://www.youtube.com/watch?v=4NfFFsQC77M&list=PLkwxH9e_vrAJshxiMo6gIavTr5kYsjPs7)
+
+[![Audi R8](http://img.youtube.com/vi/KOxbO0EI4MA/0.jpg)](https://www.youtube.com/watch?v=KOxbO0EI4MA "Audi R8")

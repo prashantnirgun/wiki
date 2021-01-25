@@ -5,11 +5,15 @@ tags:
 
 # Stock
 
+## Knowledge Base
+
+[PDF](/pdf/Notes-Technical-Analysis.pdf)
+
 ## Applying for IPO from HDFC Bank
 
 ### Read this before you are applying for IPO
 
-- Please read the IPO details and keep it handy
+- Please read the IPO details and keep it handy [Zerodha](https://zerodha.com/ipo/), [Chittorgarh](https://www.chittorgarh.com/)
   - Lot Size
   - Price Band
   - Date of allotment

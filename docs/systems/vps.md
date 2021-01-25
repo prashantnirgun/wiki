@@ -8,12 +8,12 @@
 | sudo pm2 start hello.js | Run                                                                                   |
 | sudo pm2 startup ubuntu | Autorun application on boot or crashes                                                |
 | sudo pm2 list/ls/status | Status                                                                                |
-| pm2 --name /<app_name/>   | Specify an app name                                                                   |
+| pm2 --name /<app_name/> | Specify an app name                                                                   |
 | pm2 restart app_name    |                                                                                       |
 | pm2 reload app_name     |                                                                                       |
 | pm2 stop app_name       |                                                                                       |
 | pm2 delete app_name     |                                                                                       |
-| pm2 /<command/> all       | Instead of app_name we can use all/ID for commands like restart,reload, stop & delete |
+| pm2 /<command/> all     | Instead of app_name we can use all/ID for commands like restart,reload, stop & delete |
 | pm2 start npm -- start  | Run npm script put space after --                                                     |
 | pm2 monit               | To view process Monitor                                                               |
 
@@ -73,3 +73,31 @@ cp /usr/local/psa/var/modules/letsencrypt/etc/live/[MyDomain]/cert.pem .
 
 - In some cases you need to create child record and then add it to NS record.
 - In some case you need to add IP = NS1,NS2 and then add it as NS record.
+
+## Shell Script to deploy site
+
+```bash
+password="?"
+username="?"
+Ip="?"
+clear
+echo "Current date : $(date) @ $(hostname)"
+echo "Stage 1 => compressing file"
+rm -rf wiki.zip
+cd dist
+zip -rq ../wiki.zip .
+echo "Stage 2 Begin => Uploading file"
+
+sshpass -p $password scp ../wiki.zip $username@$Ip:/paht/
+echo "Stage 2 Complete => Uploading file"
+
+echo "Stage 3 => Deploying Site"
+sshpass -p $password ssh -t -t $username@$Ip << EOF
+  cd /path/;
+  find . \! -name 'wiki.zip' -delete ;
+  unzip -qq wiki.zip >/dev/null;
+  ls -lh;
+EOF
+
+echo "Process Completed"
+```

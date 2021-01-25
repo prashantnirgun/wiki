@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # Vue
 
 ## Options
@@ -121,25 +125,25 @@ We can style to the specific component otherwise it will be added in header and 
 
 ```javascript
 //Globally
-Vue.component('app-user', {
+Vue.component("app-user", {
   data: function() {
     return {
-      users: [{ username: 'A' }, { username: 'A' }, { username: 'A' }]
+      users: [{ username: "A" }, { username: "A" }, { username: "A" }],
     };
   },
   template:
-    '<div><div class="user" v-for="user in users"><p>{{ user.username }}</p></div></div>'
+    '<div><div class="user" v-for="user in users"><p>{{ user.username }}</p></div></div>',
 });
 
 //Locally
-import Input from './input.vue';
+import Input from "./input.vue";
 
 new Vue({
-  el: '#app',
+  el: "#app",
   data: {},
   components: {
-    'app-user': Input
-  }
+    "app-user": Input,
+  },
 });
 ```
 
@@ -163,18 +167,18 @@ You can use the same mount point and dynamically switch between multiple compone
 ```
 
 ```javascript
-import formOne from './components/formOne.vue';
-import formTwo from './components/formTwo.vue';
+import formOne from "./components/formOne.vue";
+import formTwo from "./components/formTwo.vue";
 export default {
   components: {
-    'form-one': formOne,
-    'form-two': formTwo
+    "form-one": formOne,
+    "form-two": formTwo,
   },
   data() {
     return {
-      component: 'form-one'
+      component: "form-one",
     };
-  }
+  },
 };
 ```
 
@@ -201,14 +205,14 @@ File : App.vue
 ```
 
 ```javascript
-import formHelper from './components/formHelper.vue';
+import formHelper from "./components/formHelper.vue";
 export default {
   components: {
-    'form-helper': formHelper
+    "form-helper": formHelper,
   },
   data() {
     return {};
-  }
+  },
 };
 ```
 
@@ -241,16 +245,16 @@ ref is used to register a reference to an element or a child component. The refe
 
 ```javascript
 new Vue({
-  el: '#vue-app-one',
+  el: "#vue-app-one",
   data: {
-    output: 'Your favourite food'
+    output: "Your favourite food",
   },
   methods: {
     readRefs: function() {
       console.log(this.$refs);
       this.output = this.$refs.input.value;
-    }
-  }
+    },
+  },
 });
 ```
 
@@ -326,15 +330,15 @@ will considered it as string. -->
 ```
 
 ```javascript
-import Input from './Input.vue';
+import Input from "./Input.vue";
 
 export default {
   data() {
-    return { message: 'This is a great message' };
+    return { message: "This is a great message" };
   },
   components: {
-    'app-input': Input
-  }
+    "app-input": Input,
+  },
 };
 ```
 
@@ -378,15 +382,15 @@ File : Message.vue
 ```
 
 ```javascript
-import Input from './Input.vue';
+import Input from "./Input.vue";
 
 export default {
   data() {
-    return { message: 'This is a great message' };
+    return { message: "This is a great message" };
   },
   components: {
-    'app-input': Input
-  }
+    "app-input": Input,
+  },
 };
 ```
 
@@ -401,19 +405,19 @@ File : Input.vue
 ```
 
 ```javascript
-import Input from './Input.vue';
+import Input from "./Input.vue";
 
 export default {
-  props: ['msg'],
+  props: ["msg"],
   data() {
-    return { message: '' };
+    return { message: "" };
   },
   methods: {
     changeMesage(event) {
       this.message = event.target.value;
-      this.emit('messageChanged', this.message);
-    }
-  }
+      this.emit("messageChanged", this.message);
+    },
+  },
 };
 ```
 
@@ -465,17 +469,17 @@ methods: {
 File : index.js
 
 ```javascript
-import DateFilter from './filters/date';
+import DateFilter from "./filters/date";
 
-Vue.filter('to-uppercase', function(value) {
+Vue.filter("to-uppercase", function(value) {
   return value.toUpperCase();
 });
 
-Vue.filter('date', DateFilter);
+Vue.filter("date", DateFilter);
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
+  el: "#app",
+  render: (h) => h(App),
 });
 ```
 
@@ -510,20 +514,20 @@ export default {
     //use Camel case will automatically add - to it and no explicit function declaration is required
     toUppercase(value) {
       return value.toUpperCase();
-    }
-  }
+    },
+  },
 };
 ```
 
 File : src/filters/date.js
 
 ```javascript
-export default value => {
+export default (value) => {
   const date = new Date(value);
-  return date.toLocaleString(['en-US'], {
-    month: 'short',
-    day: '2-digit',
-    year: 'numeric'
+  return date.toLocaleString(["en-US"], {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
   });
 };
 ```
@@ -538,28 +542,28 @@ File : mixin/searchMixin.js
 export default {
   computed: {
     filteredBlogs: function() {
-      return this.blogs.filter(blog => {
+      return this.blogs.filter((blog) => {
         return blog.title.match(this.search);
       });
-    }
-  }
+    },
+  },
 };
 ```
 
 File : component/listBlog.vue
 
 ```javascript
-import searchMixin from '../mixins/searchMixin';
+import searchMixin from "../mixins/searchMixin";
 
 export default {
   created() {
     this.$http
-      .get('http://jsonplaceholder.typicode.com/posts')
+      .get("http://jsonplaceholder.typicode.com/posts")
       .then(function(data) {
         this.blogs = data.body.slice(0, 10);
       });
   },
-  mixins: [searchMixin]
+  mixins: [searchMixin],
 };
 ```
 
@@ -609,12 +613,12 @@ File : app.js
 File : routes.js
 
 ```javascript
-import addBlog from './components/addBlog.vue';
-import showBlogs from './components/showBlogs.vue';
+import addBlog from "./components/addBlog.vue";
+import showBlogs from "./components/showBlogs.vue";
 
 export default [
-  { path: '/', component: showBlogs },
-  { path: '/add', component: addBlog }
+  { path: "/", component: showBlogs },
+  { path: "/add", component: addBlog },
 ];
 ```
 
@@ -646,7 +650,7 @@ File : app.vue
 ```
 
 ```javascript
-import header from './components/header.vue';
+import header from "./components/header.vue";
 ```
 
 ### Router Parameter
@@ -661,9 +665,9 @@ export default {
     return {
       // id is initialised with url parameter
       id: this.$route.params.id,
-      blog: {}
+      blog: {},
     };
-  }
+  },
 };
 ```
 
@@ -689,11 +693,11 @@ File : router.js
 routes: [
   {
     //path: '/user/:id?' if id is optional
-    path: '/user/:id',
-    name: 'user',
+    path: "/user/:id",
+    name: "user",
     component: User,
-    props: true
-  }
+    props: true,
+  },
 ];
 ```
 
@@ -707,7 +711,7 @@ File : User.vue
 
 ```javascript
 export default {
-  props: ['id']
+  props: ["id"],
 };
 ```
 
@@ -716,7 +720,7 @@ export default {
 File : router.js
 
 ```javascript
-routes: [{ path: '/user/:id', name: 'user', component: User, props: true }];
+routes: [{ path: "/user/:id", name: "user", component: User, props: true }];
 ```
 
 File : User.vue
@@ -731,8 +735,8 @@ File : User.vue
 
 ```javascript
 this.$router.push({
-  name: 'event-show',
-  params: { id: this.event.id }
+  name: "event-show",
+  params: { id: this.event.id },
 });
 ```
 
@@ -765,22 +769,22 @@ install vuex --save
 File : index.js
 
 ```javascript
-import Vue from 'vue';
-import App from './App.vue';
-import { store } from './store/store';
+import Vue from "vue";
+import App from "./App.vue";
+import { store } from "./store/store";
 
 new Vue({
-  el: '#app',
+  el: "#app",
   store: store,
-  render: h => h(App)
+  render: (h) => h(App),
 });
 ```
 
 File : store/store.js
 
 ```javascript
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from "vue";
+import Vuex from "vuex";
 //Adding a middleware / Plugin
 Vue.use(Vuex);
 
@@ -790,12 +794,12 @@ export const store = new Vuex.Store({
   strict: true,
   state: {
     products: [
-      { name: 'Banana Skin', price: 20 },
-      { name: 'Shiny Star', price: 40 },
-      { name: 'Green Shells', price: 60 },
-      { name: 'Red Shells', price: 80 }
-    ]
-  }
+      { name: "Banana Skin", price: 20 },
+      { name: "Shiny Star", price: 40 },
+      { name: "Green Shells", price: 60 },
+      { name: "Red Shells", price: 80 },
+    ],
+  },
 });
 ```
 
@@ -822,8 +826,8 @@ export default {
   computed: {
     products() {
       return this.$store.state.products;
-    }
-  }
+    },
+  },
 };
 ```
 
@@ -832,14 +836,14 @@ Exmaple 03 use MapState
 File : components/ProductListOne.vue
 
 ```javascript
-import { mapState } from 'vuex';
+import { mapState } from "vuex";
 
 export default {
   computed: {
     ...mapState({
-      products
-    })
-  }
+      products,
+    }),
+  },
 };
 ```
 
@@ -851,9 +855,9 @@ File : components/ProductListOne.vue
 export default {
   computed: {
     ...mapState({
-      products: state => state.products
-    })
-  }
+      products: (state) => state.products,
+    }),
+  },
 };
 ```
 
@@ -876,31 +880,31 @@ Vuex allows us to define "getters" in the store. You can think of them as comput
 File : store/store.js
 
 ```javascript
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from "vue";
+import Vuex from "vuex";
 
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
     products: [
-      { name: 'Banana Skin', price: 20 },
-      { name: 'Shiny Star', price: 40 },
-      { name: 'Green Shells', price: 60 },
-      { name: 'Red Shells', price: 80 }
-    ]
+      { name: "Banana Skin", price: 20 },
+      { name: "Shiny Star", price: 40 },
+      { name: "Green Shells", price: 60 },
+      { name: "Red Shells", price: 80 },
+    ],
   },
   getters: {
-    saleProducts: state => {
-      var saleProducts = state.products.map(product => {
+    saleProducts: (state) => {
+      var saleProducts = state.products.map((product) => {
         return {
-          name: '**' + product.name + '**',
-          price: product.price / 2
+          name: "**" + product.name + "**",
+          price: product.price / 2,
         };
       });
       return saleProducts;
-    }
-  }
+    },
+  },
 });
 ```
 
@@ -911,8 +915,8 @@ export default {
   computed: {
     saleProducts() {
       return this.$store.getters.saleProducts;
-    }
-  }
+    },
+  },
 };
 ```
 
@@ -928,19 +932,19 @@ export const store = new Vuex.Store({
   strict: true,
   state: {
     products: [
-      { name: 'Banana Skin', price: 20 },
-      { name: 'Shiny Star', price: 40 },
-      { name: 'Green Shells', price: 60 },
-      { name: 'Red Shells', price: 80 }
-    ]
+      { name: "Banana Skin", price: 20 },
+      { name: "Shiny Star", price: 40 },
+      { name: "Green Shells", price: 60 },
+      { name: "Red Shells", price: 80 },
+    ],
   },
   mutations: {
-    REDUCE_PRICE: state => {
-      state.products.forEach(product => {
+    REDUCE_PRICE: (state) => {
+      state.products.forEach((product) => {
         product.price -= 1;
       });
-    }
-  }
+    },
+  },
 });
 ```
 
@@ -950,9 +954,9 @@ File : components/ProductListOne.vue
 export default {
   methods: {
     reducePrice: function() {
-      this.$store.commit('REDUCE_PRICE');
-    }
-  }
+      this.$store.commit("REDUCE_PRICE");
+    },
+  },
 };
 ```
 
@@ -966,8 +970,8 @@ Actions are similar to mutations, the differences being that:
 File : store/store.js
 
 ```javascript
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from "vue";
+import Vuex from "vuex";
 
 Vue.use(Vuex);
 
@@ -975,37 +979,37 @@ export const store = new Vuex.Store({
   strict: true,
   mutations: {
     REDUCE_PRICE: (state, payload) => {
-      state.products.forEach(product => {
+      state.products.forEach((product) => {
         product.price -= payload;
       });
-    }
+    },
   },
   actions: {
     reducePrice: (context, payload) => {
       setTimeout(function() {
         // reach out for data
-        context.commit('REDUCE_PRICE', payload);
+        context.commit("REDUCE_PRICE", payload);
       }, 2000);
-    }
-  }
+    },
+  },
 });
 ```
 
 File : components/ProductListOne.vue
 
 ```javascript
-import { mapActions, mapGetters } from 'vuex';
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   computed: {
     products() {
       return this.$store.state.products;
     },
-    ...mapGetters(['saleProducts'])
+    ...mapGetters(["saleProducts"]),
   },
   methods: {
-    ...mapActions(['reducePrice'])
-  }
+    ...mapActions(["reducePrice"]),
+  },
 };
 ```
 
@@ -1103,10 +1107,10 @@ npm install --save vuex-persistedstate
 02 File /src/store/store.js
 
 ```javascript
-import createPersistedState from 'vuex-persistedstate';
+import createPersistedState from "vuex-persistedstate";
 
 const Store = new Vuex.Store({
-  plugins: [createPersistedState()]
+  plugins: [createPersistedState()],
 });
 ```
 
@@ -1123,3 +1127,7 @@ const Store = new Vuex.Store({
 | Description                      | Parent  | Child   |
 | -------------------------------- | ------- | ------- |
 | Update Name from child to parent | getName | setName |
+
+## Cheatsheet
+
+[VueMastery](https://www.vuemastery.com/pdf/Vue-Essentials-Cheat-Sheet.pdf)
