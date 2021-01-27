@@ -42,8 +42,9 @@ node_modules/
 jspm_packages/
 
 docs/.vuepress/dist
-docs/.vuepress/deply.sh
+docs/.vuepress/deploy.sh
 docs/.vuepress.wiki.zip
+docs/.vuepress/public/videos/
 # TypeScript v1 declaration files
 typings/
 

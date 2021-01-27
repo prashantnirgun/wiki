@@ -153,5 +153,17 @@ adduser \<username\>
 
 ## zsh
 
+- [Cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
 - [Video](https://www.youtube.com/watch?v=su0h5StEZ6A&t=533s)
 - [Docs](https://medium.com/@shivam1/make-your-terminal-beautiful-and-fast-with-zsh-shell-and-powerlevel10k-6484461c6efb)
+
+## Alias
+
+```bash
+alias wr="cd ~/www"
+alias wiki="cd ~/www/cloudapmc.com/wiki.tss.net.in"
+alias family="cd ~/www/cloudapmc.com/nirgun.co.in"
+alias ec="cd ~/www/cloudapmc.com/store.cloudapmc.com"
+alias api="cd ~/www/cloudapmc.com/api.cloudapmc.com"
+# alias ls -l="ls -lh"
+```
