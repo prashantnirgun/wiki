@@ -28,3 +28,12 @@
 ## NVM
 
 Node version Manager if you want to use different node version
+
+## Global Packages
+
+```bash
+sudo npm install -g feathers-cli
+sudo npm install -g @quasar/cli
+sudo npm install -g nodemon
+sudo npm install -g @quasar/icongenie
+```
