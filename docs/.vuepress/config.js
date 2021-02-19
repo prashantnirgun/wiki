@@ -61,51 +61,9 @@ module.exports = {
             { text : 'About Me', link : '/about'},
         ],
         sidebar : [            
-             /*
-              title: 'Programing',              
-                path: '/programing/',    
-                children: [
-                  '/programing/power-builder',
-                  '/programing/node',
-                  '/programing/vue',
-                  '/programing/quasar',
-                  '/programing/github',
-                  '/programing/npm',
-                ]
-              },
-              {
-                title: 'API',              
-                path: '/api/',    
-                children: [
-                  '/api/api-standard',
-                  '/api/loopback',
-                  '/api/swagger',
-                  '/api/feathers',
-                ]
-              },
-              {
-                title: 'Database',              
-                path: '/database/',    
-                children: [
-                  '/database/mysql',
-                  '/database/mongo',
-                ]
-              },
-              
-              {
-                title: 'Editors',              
-                path: '/editors/',    
-                children: [
-                  '/editors/atom',
-                  '/editors/phpmyadmin',
-                  '/editors/vim',
-                  '/editors/vs-code',
-                ]
-              },
-              */
              {
-              title: 'Projects',              
-              path: '/projects/',    
+              title: 'Projects',
+              collapsable: false, 
               children: [
                 '/projects/apmc-desktop',
                 '/projects/credit-society',
@@ -114,7 +72,8 @@ module.exports = {
               ]
             },
               {
-                title: 'Systems',                        
+                title: 'Systems',  
+                collapsable: false,                       
                 children: [
                   '/systems/windows',
                   '/systems/linux',
@@ -125,9 +84,13 @@ module.exports = {
               },
               {
                 title: 'Software',
+                collapsable: false, 
                 children: [
                   '/softwares/stock',               
-                  '/softwares/test',               
+                  '/softwares/vuepress',               
+                  '/softwares/reveal',               
+                  '/softwares/links',               
+                  '/softwares/seo',               
                 ]
               }
         ]

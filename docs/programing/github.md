@@ -17,7 +17,7 @@ Dev A git fetch git log -p branch_a..origin/branch_a git merge origin/branch_a g
 | #   | command                                            | Note                                                            |
 | --- | -------------------------------------------------- | --------------------------------------------------------------- |
 | 01  | git init                                           | Initialised git .                                               |
-| 02  | git config --global user.email "\<Your Email\>"      | If you dont want to ask user name every time set it globally.   |
+| 02  | git config --global user.email "\<Your Email\>"    | If you dont want to ask user name every time set it globally.   |
 | 03  | git remote add origin <https://github.com/>        | You need to tell repository path from where the source.         |
 | 04  | git pull origin master --allow-unrelated-histories | Fetch the repository from remote to local and merge with local. |
 | 05  | ls -ali                                            | Linux command to check .git folder and downloaded files.        |
@@ -117,9 +117,9 @@ git rm <file name>
 
 ## Recover / Undo the Change from repository
 
-| Usage                           | command                                               | Note                                                                       |
-| ------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------- |
-| Remove File from current branch | git checkout -- \<file / directory name\>               | "--" Is Not checking out of current branch. And push file to staging Index |
+| Usage                           | command                                                   | Note                                                                       |
+| ------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Remove File from current branch | git checkout -- \<file / directory name\>                 | "--" Is Not checking out of current branch. And push file to staging Index |
 | Remove File from commit         | git checkout \<commit no 4 or 10 digit\> -- \<file name\> | from older commit                                                          |
 
 ## Remove file from Staging Index
@@ -168,18 +168,18 @@ View Branch
 
 ## Create Branch
 
-| Usage                      | command                                              | Note                                                                                                                                                               |
-| -------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Usage                      | command                                                | Note                                                                                                                                                               |
+| -------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Create                     | git branch \<new_feature\>                             | No spaces only letter number and underscore. Remember it will create from where your HEAD is                                                                       |
 | Create + Checkout          | git checkout -b \<new_feature\>                        | To create new branch and switch to it                                                                                                                              |
 | Create branch Non Tracking | git branch \<non_tracking\> \<alias\>/\<non_tracking\> | To create changes to non tracking branch.Branch that we are not maintaining and <\br>now we need to read or make changes to code ie bringing from origin to local. |
-| Sub Branch                 | git checkout -b development master                   | To Create a sub branch                                                                                                                                             |
+| Sub Branch                 | git checkout -b development master                     | To Create a sub branch                                                                                                                                             |
 
 ## Change / Checkout Branch
 
 | Usage           | command                                                             | Note                      |
 | --------------- | ------------------------------------------------------------------- | ------------------------- |
-| Checkout Local  | git checkout \<branch_name\>                                          | to move out to new branch |
+| Checkout Local  | git checkout \<branch_name\>                                        | to move out to new branch |
 | Checkout Remote | git checkout \<local branch name\> \<alias\>/\<remote branch name\> | To checkout remote branch |
 
 ## Delete Branch
@@ -240,9 +240,9 @@ git clone <https://github.com/> <directory>
 
 ## Fetch from server
 
-| #   | command                    | Note                                                                                                                              |
-| --- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | git fetch \<alias\>        | \<alias\> is optional if it is only one.Alias will be origin if not set other. get fetch will fetch repository from remote server |
+| #   | command                      | Note                                                                                                                              |
+| --- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | git fetch \<alias\>          | \<alias\> is optional if it is only one.Alias will be origin if not set other. get fetch will fetch repository from remote server |
 | 2   | git merge \<origine/master\> | Merge in fetched changes                                                                                                          |
 
 ## Pull from server
@@ -250,3 +250,15 @@ git clone <https://github.com/> <directory>
 | Usage | command  | Note                                         |
 | ----- | -------- | -------------------------------------------- |
 | Pull  | git pull | Pull command does two steps ie fetch & merge |
+
+### ZSH Alias [CheatSheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
+
+- g : git
+- ga : git add
+- gaa : git add all
+- gcm : git checkout \<master\>
+- gcam : git commit -a -m
+- gco : git checkout
+- gl : git pull
+- gp : git push
+- gm : git merege

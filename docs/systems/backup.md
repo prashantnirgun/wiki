@@ -1,14 +1,17 @@
 # Backup
 
 ## Software
-| Software | OS | Purpose |
-|---|---|---|
+
+| Software   | OS      | Purpose                  |
+| ---------- | ------- | ------------------------ |
 | Soursetree | Windows | Git Client Mysql Scripts |
-| sqlbak | Both | MySQL backup |
-| FileZilla| Linux | Upload folders to FPT|
+| sqlbak     | Both    | MySQL backup             |
+| FileZilla  | Linux   | Upload folders to FPT    |
 
 ### Bat File
+
 File : scr2zip.bat
+
 ```bash
 @echo off
 
@@ -25,30 +28,32 @@ echo all done!
 ```
 
 File : file.lst
+
 ```
-d:\tss\bin\bpp\*.pbl 
+d:\tss\bin\bpp\*.pbl
 d:\tss\bin\bpp\*.pbt
-d:\tss\bin\bum\*.pbl 
+d:\tss\bin\bum\*.pbl
 d:\tss\bin\bum\*.pbt
 d:\tss\bin\bum\*.sql
-d:\tss\bin\core\*.pbl 
+d:\tss\bin\core\*.pbl
 d:\tss\bin\core\*.pbt
-d:\tss\bin\cheque\*.pbl 
+d:\tss\bin\cheque\*.pbl
 d:\tss\bin\cheque\*.pbt
-d:\tss\bin\bum\*.pbl 
+d:\tss\bin\bum\*.pbl
 d:\tss\bin\bum\*.pbt
-d:\tss\bin\sms\*.pbl 
+d:\tss\bin\sms\*.pbl
 d:\tss\bin\sms\*.pbt
-d:\tss\bin\workspace\*.* 
+d:\tss\bin\workspace\*.*
 D:\tss\Bin\retail\*.pbt
 D:\tss\Bin\retail\*.pbl
 D:\tss\Bin\mandal\*.pbt
 D:\tss\Bin\mandal\*.pbl
 ```
 
-### Shell Script 
+### Shell Script
 
 ## Folder
+
 1. Virtual Machine & HDD
 1. My-Desk
 1. Share-Me
@@ -61,4 +66,8 @@ D:\tss\Bin\mandal\*.pbl
 1. Workbench Profile
 1. FileZilla Profile
 1. PDF Printer Profile
-1. Code Editors Settings 
+1. Code Editors Settings
+
+## Restore
+
+- Browser Extensions : VueDev Tools, Json Formattter

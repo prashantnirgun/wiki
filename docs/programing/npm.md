@@ -24,3 +24,7 @@
 | sudo npm install --unsafe-perm -g strongloop | Error                                                                                                                                         |
 | npm outdated                                 | List all out dated packagess                                                                                                                  |
 | npm update                                   | Update all out dated packages                                                                                                                 |
+
+## NVM
+
+Node version Manager if you want to use different node version
