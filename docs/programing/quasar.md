@@ -54,6 +54,15 @@ File : src/layout/MainLayout.vue
 </q-page-container>
 ```
 
+### Kick Start
+
+```bash
+npm install --save vuex-persistedstate
+npm install vue2-filters
+$ npm install vue-i18n
+quasar ext add @quasar/dotenv
+```
+
 ### i18n Support
 
 #### Installation

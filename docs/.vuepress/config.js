@@ -26,6 +26,7 @@ module.exports = {
             { text : 'Home', link : '/'},
             { text : 'Programing', items : [
               { text: 'Power Builder', link: '/programing/power-builder/'},
+              { text: 'JavaScript', link: '/programing/javascript/'},
               { text: 'Node', link: '/programing/node/'},
               { text: 'Vue', link: '/programing/vue/'},
               { text: 'Quasar', link: '/programing/quasar/'},

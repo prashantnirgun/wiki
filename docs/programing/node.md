@@ -86,3 +86,117 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ http://127.0.0.1:XXXXX/$1 [P,L]
 ```
+
+## Understanding module.exports and exports in Node.js
+
+Node.js comes with a CommonJS format, the standard set of built-in modules that we can use in our code without having to install them. To do this, we need to require the module using the require keyword and assign the result to a variable. This can then be used to invoke any methods the module exposes.
+
+## What’s the Difference Between module.exports and exports?
+
+### Creating and Exporting a Module
+
+```js
+// user.js
+const getName = () => {
+  return "Jim";
+};
+
+exports.getName = getName;
+
+//index.js
+const user = require("./user");
+console.log(`User: ${user.getName()}`);
+```
+
+### Exporting Multiple Methods and Values
+
+```js
+const getName = () => {
+  return "Jim";
+};
+
+const getLocation = () => {
+  return "Munich";
+};
+
+const dateOfBirth = "12.01.1982";
+
+exports.getName = getName;
+exports.getLocation = getLocation;
+exports.dob = dateOfBirth;
+```
+
+### Variations in Syntax
+
+```js
+//user.js
+exports.getName = () => {
+  return "Jim";
+};
+
+exports.getLocation = () => {
+  return "Munich";
+};
+
+exports.dob = "12.01.1982";
+//index.js
+const { getName, dob } = require("./user");
+console.log(`${getName()} was born on ${dob}.`);
+```
+
+## Module.exports
+
+The foo variable would be ignored.
+
+```js
+//user.js
+exports.foo = "foo";
+module.exports = {
+  getName: () => {
+    return "Jim";
+  },
+
+  getLocation: () => {
+    return "Munich";
+  },
+
+  dob: "12.01.1982",
+};
+
+//index.js
+const { getName, dob } = require("./user");
+console.log(`${getName()} was born on ${dob}.`);
+
+//OR
+const User = require("./user");
+console.log(`${User.getName()} was born on ${User.dob}.`);
+```
+
+## Class Example
+
+```js
+//user.js
+class User {
+  constructor(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  }
+
+  getUserStats() {
+    return `
+      Name: ${this.name}
+      Age: ${this.age}
+      Email: ${this.email}
+    `;
+  }
+}
+
+module.exports = User;
+
+//index.js
+const User = require("./user");
+const jim = new User("Jim", 37, "jim@example.com");
+
+console.log(jim.getUserStats());
+```
