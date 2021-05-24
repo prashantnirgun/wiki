@@ -167,3 +167,7 @@ alias ec="cd ~/www/cloudapmc.com/store.cloudapmc.com"
 alias api="cd ~/www/cloudapmc.com/api.cloudapmc.com"
 # alias ls -l="ls -lh"
 ```
+
+## Links
+
+- [NGINX](https://www.tecmint.com/change-nginx-port-in-linux/)

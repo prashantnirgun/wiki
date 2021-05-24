@@ -50,6 +50,7 @@ sidebar: auto
 - Font Family : Cascadia Code
 - Font Ligatures : You need to go to Settings.json and set to true
 - Open Files : workbench.editor.enablePreview = false
+- Window.Title : ${activeFolderMedium}/${activeEditorShort}${separator}${rootPath}\${separator}
 
 ## Shortcuts
 

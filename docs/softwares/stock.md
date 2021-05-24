@@ -55,3 +55,7 @@ tags:
    1. IPO Order Book
       1. Select the IPO and date and click on Submit.
       1. Take a screeshot of the page for your reference.
+
+### Cut off timing for IPO on last day
+
+HDFC is 3:00 PM for ther bank [visit](https://www.chittorgarh.com/article/last-day-ipo-bidding-time-limit-banks/357/)

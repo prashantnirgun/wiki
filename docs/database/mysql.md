@@ -563,6 +563,13 @@ mysqldump -u root --routines --no-create-info --no-data --no-create-db --skip-op
 select user from mysql.user;
 ```
 
+### Reset Root Password
+
+```sql
+UPDATE mysql.user SET Password=PASSWORD('password') WHERE User='root';
+FLUSH PRIVILEGES;
+```
+
 ### Create User
 
 ```sql
@@ -668,10 +675,21 @@ net stop MySQL
 ```
 
 To deinstall the service, use the option —remove:
+01 Step
 
 ```bash
 mysqld —remove MySQL
 ```
+
+02 Step
+
+```bash
+sc delete "Mysql"
+```
+
+03 Step
+Remove from registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services
+ref https://docs.microsoft.com/en-gb/sysinternals/downloads/autoruns
 
 ## links to MySQL
 

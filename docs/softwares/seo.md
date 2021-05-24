@@ -26,3 +26,7 @@
 - [SEO Title Checker](https://serpsim.com/)
 - [Sitemap](https://www.xml-sitemaps.com/)
 - [Google Analytics](https://analytics.google.com/)
+- [http2 Test](https://www.dareboost.com/en/website-speed-test-http2-vs-http1)
+- [Metabase](https://www.metabase.com/learn/index)
+- [Matomo](https://matomo.org/)
+- [Fathom](https://usefathom.com/)

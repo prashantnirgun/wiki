@@ -19,3 +19,5 @@
 
 - [Plaeholder](https://placeimg.com/)
 - [Image Compressor](https://imagecompressor.com/)
+- [Freepik](https://www.freepik.com/)
+- [Fake Email](https://www.fakemail.net/)
