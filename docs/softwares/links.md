@@ -21,3 +21,9 @@
 - [Image Compressor](https://imagecompressor.com/)
 - [Freepik](https://www.freepik.com/)
 - [Fake Email](https://www.fakemail.net/)
+
+## Test tools
+
+- [Saucellabs](https://saucelabs.com/)
+- [Browser Stack](https://www.browserstack.com/)
+- [Cypress](https://www.cypress.io/)

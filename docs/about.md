@@ -20,12 +20,15 @@
 
 - **Languages & 4 GL**: C, Foxpro, Java, PowerBuilder, Python, Node
 - **Scripting Laguages** : PHP, Javascript,
-- **Frameworks & Libraries** : CodeIgniter, Quasar, NativeScript, NPM, Vue, Jquery, Express, Electron
+- **Frameworks & Libraries** : CodeIgniter, NativeScript, TypeScript, NPM, Jquery, Express, Electron, Vue 2, Vue 3, Quasar.js, Nuxt.js, Vuepress
 - **UI Framework** : Bootstrap, Vuetify, CSS, Flex
 - **Databases** : Foxpro, Foxbase, WatcomSQL, Sybase, Oracle, MS-SQL, MySQL, MongoDB, PostgreSQL, SQLite
-- **ORM** - Sequelize
+- **Payment Gateway Integration** : Instamojo, Razorpay
+- **ORM** : Sequelize, feathers.js, objections.js
 - **Mobile** : Android, NativeSCript, Quasar, Flutter, Angular
+- **Package Manager** : npm, yarn
 - **Editors** : Vim, Sublime, VS-Code
+- **API Tool** : Postman, Insomnia
 - **WebServer** : Apache2
 - **Repositories** : GitHub (Public), BitBucket (Private)
-- **Operating System** - DOS, Windows X (Desktop & NT), Linux (RHEL & Debian)
+- **Operating System** - DOS, Windows X (Desktop & NT), Linux (RHEL & Debian), Mac (OS2)

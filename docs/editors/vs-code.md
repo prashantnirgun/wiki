@@ -33,6 +33,10 @@ sidebar: auto
 | DotENV                     | Colours your env variables                                                                                                                                                     |
 | Settgins Sync              | Sync all your vs-code settings and extension on github                                                                                                                         |
 
+```bash
+sudo apt-get install fonts-cascadia-code
+```
+
 ## Theme
 
 - Cobalt
@@ -51,6 +55,7 @@ sidebar: auto
 - Font Ligatures : You need to go to Settings.json and set to true
 - Open Files : workbench.editor.enablePreview = false
 - Window.Title : ${activeFolderMedium}/${activeEditorShort}${separator}${rootPath}\${separator}
+- Vetur : Enable template interpolation service that hover / defination / references in Vue interpolations.
 
 ## Shortcuts
 

@@ -59,3 +59,9 @@ tags:
 ### Cut off timing for IPO on last day
 
 HDFC is 3:00 PM for ther bank [visit](https://www.chittorgarh.com/article/last-day-ipo-bidding-time-limit-banks/357/)
+
+### Stock of the month
+
+| Month           | Ticker  | Stock                 |
+| --------------- | ------- | --------------------- |
+| Novmeber - 2021 | DEVYANI | Devyani International |

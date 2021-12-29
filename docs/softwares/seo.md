@@ -30,3 +30,8 @@
 - [Metabase](https://www.metabase.com/learn/index)
 - [Matomo](https://matomo.org/)
 - [Fathom](https://usefathom.com/)
+- [Russel Brunson](https://www.youtube.com/channel/UC2qUDKqTsz00csykCYgdLuA)
+- [Frank Kern](https://www.youtube.com/user/OfficialFrankKern)
+- [123apps.com](https://123apps.com)
+- [Remove Background](https://www.remove.bg/)
+

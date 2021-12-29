@@ -1,6 +1,5 @@
 # APMC Desktop
 
-
 ## Dhada Book Diagrame
 
 ![Font](/images/diagram/dhada-book.png "Week View" =800x600)
@@ -102,4 +101,10 @@ sum(tot_exp) - (sum(sales_tax) +sum(commission) +sum(motor) +sum(hamali) +sum(pa
 sum(cgst) + sum(igst) + sum(sgst) + sum(rnd_amt) +
 sum(ifnull(other1,0)) + sum(ifnull(other2,0)) + sum(ifnull(other3,0)) + sum(ifnull(other4,0)))  as tax_diffrence
 FROM sales_bill where co_id = @co_id and doc_dt BETWEEN @start_date AND @end_date;
+
+-- Sales Amount Difference
+select a.co_id, a.ord_no, a.doc_dt, a.customer_id, a.sales, b.sales, a.sales - b.sales as diff
+from sales_bill a JOIN (select co_id, doc_dt, customer_id, sum(amount)as sales from sales_dtl group by co_id, doc_dt, customer_id) as b
+ON (a.co_id = b.co_id and a.doc_dt = b.doc_dt aND a.customer_id = b.customer_id)
+where a.co_id = 1 having diff = 0.00
 ```

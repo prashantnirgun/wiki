@@ -37,3 +37,11 @@ sudo npm install -g @quasar/cli
 sudo npm install -g nodemon
 sudo npm install -g @quasar/icongenie
 ```
+
+## Scripts
+
+| Syntax                                | Explanation                               |
+| ------------------------------------- | ----------------------------------------- |
+| "start:build" :"tsc -w"               | Start with tsc with watch mode            |
+| "start:run" : "nodemon build/node.js" | Start nodemon                             |
+| "start" : "concurrently npm:start:\*" | Start all process that has start: scripts |

@@ -39,9 +39,13 @@ module.exports = {
           { text: "JavaScript", link: "/programing/javascript/" },
           { text: "Node", link: "/programing/node/" },
           { text: "Vue", link: "/programing/vue/" },
+          { text: "Vue 3", link: "/programing/vue3/" },
           { text: "Quasar", link: "/programing/quasar/" },
           { text: "Github", link: "/programing/github/" },
           { text: "NPM", link: "/programing/npm/" },
+          { text: "Feathers", link: "/programing/feathers/" },
+          { text: "Nuxt", link: "/programing/nuxt/" },
+          { text: "TypeScript", link: "/programing/typescript/" },
         ],
       },
       {

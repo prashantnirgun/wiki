@@ -115,18 +115,43 @@ Delete File from Repository
 git rm <file name>
 ```
 
-## Recover / Undo the Change from repository
 
-| Usage                           | command                                                   | Note                                                                       |
-| ------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Remove File from current branch | git checkout -- \<file / directory name\>                 | "--" Is Not checking out of current branch. And push file to staging Index |
-| Remove File from commit         | git checkout \<commit no 4 or 10 digit\> -- \<file name\> | from older commit                                                          |
 
-## Remove file from Staging Index
+## Recover / Undo the Change from branch
+
+| Usage                           | command                                                | Note                                                         |
+| ------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
+| Remove File from current branch | git checkout  \<file / directory name\>                | "--" Is Not checking out of current branch. And push file to staging Index |
+| Remove File from commit         | git checkout \<commit no 4 or 10 digit\> \<file name\> | from older commit                                            |
+| Remove All Files                | git checkout .                                         |                                                              |
+
+## Remove file from Staging Index 
+
+Note : Local not yet published
+
+| Particulars                                     | From staging (Not Published) |
+| ----------------------------------------------- | ---------------------------- |
+| Single File                                     | git reset HEAD <file Name>   |
+| All Files                                       | git reset HEAD .             |
+| Last 3 commit                                   | git reset HEAD~<no>          |
+| Remove files but kept in Working Area (Default) | get reset --mixed HEAD~<no>  |
+| Remove files but kept in staging Area           | get reset --soft HEAD~<no>   |
+| Remove files from both Working & Staging Area   | get reset --hard HEAD~<no>   |
+
+
+
+## Remove Files from Published Branch / Repository 
+
+Its not removing any things from history but it add a new commit and put you back to that commit.
+
+Note : Published branch
 
 ```bash
-git reset HEAD <file Name>
+git log --oneline
+git revert <commit>
 ```
+
+
 
 ## View Logs
 
