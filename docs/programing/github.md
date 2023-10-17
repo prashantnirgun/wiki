@@ -115,17 +115,15 @@ Delete File from Repository
 git rm <file name>
 ```
 
-
-
 ## Recover / Undo the Change from branch
 
-| Usage                           | command                                                | Note                                                         |
-| ------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
-| Remove File from current branch | git checkout  \<file / directory name\>                | "--" Is Not checking out of current branch. And push file to staging Index |
-| Remove File from commit         | git checkout \<commit no 4 or 10 digit\> \<file name\> | from older commit                                            |
-| Remove All Files                | git checkout .                                         |                                                              |
+| Usage                           | command                                                | Note                                                                       |
+| ------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------- |
+| Remove File from current branch | git checkout \<file / directory name\>                 | "--" Is Not checking out of current branch. And push file to staging Index |
+| Remove File from commit         | git checkout \<commit no 4 or 10 digit\> \<file name\> | from older commit                                                          |
+| Remove All Files                | git checkout .                                         |                                                                            |
 
-## Remove file from Staging Index 
+## Remove file from Staging Index
 
 Note : Local not yet published
 
@@ -138,9 +136,7 @@ Note : Local not yet published
 | Remove files but kept in staging Area           | get reset --soft HEAD~<no>   |
 | Remove files from both Working & Staging Area   | get reset --hard HEAD~<no>   |
 
-
-
-## Remove Files from Published Branch / Repository 
+## Remove Files from Published Branch / Repository
 
 Its not removing any things from history but it add a new commit and put you back to that commit.
 
@@ -150,8 +146,6 @@ Note : Published branch
 git log --oneline
 git revert <commit>
 ```
-
-
 
 ## View Logs
 
@@ -275,6 +269,34 @@ git clone <https://github.com/> <directory>
 | Usage | command  | Note                                         |
 | ----- | -------- | -------------------------------------------- |
 | Pull  | git pull | Pull command does two steps ie fetch & merge |
+
+## Create new repository from cli
+
+```
+echo "# Mastering-Nuxt-3" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/prashantnirgun/Mastering-Nuxt-3.git
+git push -u origin master
+```
+
+## Push existing repository from cli
+
+```
+git remote add origin https://github.com/prashantnirgun/Mastering-Nuxt-3.git
+git branch -M master
+git push -u origin master
+```
+
+## GIT initialise
+
+- git init
+- git add .
+- git commit -m "first commit"
+- git remote add origin <.git>
+- git push - u origin master
 
 ### ZSH Alias [CheatSheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet)
 

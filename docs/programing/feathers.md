@@ -16,13 +16,13 @@ Objections
 MySQL
 ESLint
 
-## Serivces 
+## Serivces
 
 ```bash
 feathers generate service
 ```
 
-What Kind of Services is it?  Objection
+What Kind of Services is it? Objection
 
 What is the name of the service? PlanRates
 
@@ -30,23 +30,19 @@ Which path should the service be registered on? /plan-rates
 
 Does the service require authentication? Y
 
-
-
 ### Objections-Relations
 
-|    Tables    |     Persons     | Animals                                                      |
-| :----------: | :-------------: | :----------------------------------------------------------- |
-|   Columns    |    id, name     | id, name, owner_id                                           |
-|      ON      |   persons.id    | animals.owerner_id                                           |
-|     Data     |      John       | Tomy, Shaun                                                  |
-|  Relations   |       1.n       | 1.1                                                          |
-| Relationship | HasManyRelation | HasOneRelation                                               |
-|  modelClass  |     Animals     | Person                                                       |
-|     from     |   persons.id    | animals.ownerId                                              |
-|      to      | animals.ownerId | persons.id                                                   |
-|              |                 | owner: {       relation: Model.BelongsToOneRelation,       modelClass: Person,       join: {         from: 'animals.ownerId',         to: 'persons.id'       }     } |
-
-
+|    Tables    |     Persons     | Animals                                                                                                                  |
+| :----------: | :-------------: | :----------------------------------------------------------------------------------------------------------------------- |
+|   Columns    |    id, name     | id, name, owner_id                                                                                                       |
+|      ON      |   persons.id    | animals.owerner_id                                                                                                       |
+|     Data     |      John       | Tomy, Shaun                                                                                                              |
+|  Relations   |       1.n       | 1.1                                                                                                                      |
+| Relationship | HasManyRelation | HasOneRelation                                                                                                           |
+|  modelClass  |     Animals     | Person                                                                                                                   |
+|     from     |   persons.id    | animals.ownerId                                                                                                          |
+|      to      | animals.ownerId | persons.id                                                                                                               |
+|              |                 | owner: { relation: Model.BelongsToOneRelation, modelClass: Person, join: { from: 'animals.ownerId', to: 'persons.id' } } |
 
 How to create custom-services ?
 
@@ -68,11 +64,9 @@ How to call services from other services : Please check Security first
 await this.app.service("user-profiles").create(data.user_profiles, params);
 ```
 
-
-
 ## Hooks (Middleware)
 
-Hook should always return context. 
+Hook should always return context.
 
 ```
 async (context) => {
@@ -83,7 +77,7 @@ async (context) => {
 
 ## Migration
 
-In some case you have to use npx, run from folder which you have knexfile.js. 
+In some case you have to use npx, run from folder which you have knexfile.js.
 
 ```bash
 knex migrate:make migration_name #default
@@ -98,11 +92,8 @@ npx knex migrate:latest --env production
 If you have async task then make sure both up & down functions are async
 
 ```js
-exports.up = async function (knex) {
-}
+exports.up = async function(knex) {};
 ```
-
-
 
 ## Seeds
 
@@ -113,8 +104,6 @@ knex seed:make seed_name or npx knex seed:make seed_name
 knex seed:run //run
 knex seed:run --specific=02_plan_rates.js  //specific file
 ```
-
-
 
 ## Methods
 
@@ -131,9 +120,8 @@ knex seed:run --specific=02_plan_rates.js  //specific file
 
 ```
 http://localhost:3031/countries?$select[]=name
+localhost:3030/companies?$joinRelation=[states]&$select[]=*
 ```
-
-
 
 ### Git
 
@@ -146,17 +134,15 @@ git pull
 git checkout feature/subscription
 git merge development
 git status
-git 
+git
 ```
 
-
-
-### Errors 
+### Errors
 
 MySQL
 
 ```
- cp ~/Downloads/myyslq.zip node_modules/knex/lib/dialects 
+ cp ~/Downloads/myyslq.zip node_modules/knex/lib/dialects
 ```
 
 ### Queries
@@ -165,7 +151,7 @@ MySQL
 | ----------------------------------------------------------- | ---- |
 | /age-levels?age[$gte]=6&month[$gte]=3&$sort[age]=1&$limit=1 |      |
 | /student-plan-subscriptions?controller=active-plan          |      |
-|                                                             |      |
+| localhost:3030/companies?company_name[$like]=The%           |      |
 
 ### Params
 
@@ -204,7 +190,7 @@ Nested Insert : this will handle identity and relation
 
 ```js
 const graph = await this.Model.query().insertGraph({
-...users, userProfiles: [{ ...user_profiles }],
+  ...users,
+  userProfiles: [{ ...user_profiles }],
 });
 ```
-

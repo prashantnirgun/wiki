@@ -62,6 +62,30 @@ HDFC is 3:00 PM for ther bank [visit](https://www.chittorgarh.com/article/last-d
 
 ### Stock of the month
 
-| Month           | Ticker  | Stock                 |
-| --------------- | ------- | --------------------- |
-| Novmeber - 2021 | DEVYANI | Devyani International |
+| Month           | Ticker          | Stock                                    |
+| --------------- | --------------- | ---------------------------------------- |
+| December - 2022 | NSE: SRF        | SRF Limited                              |
+| November 2022   | EASEMYTRIP      | Easy Trip Planners Ltd.                  |
+| October 2022    | BAJFINANCE      | Bajaj Finserv Ltd.                       |
+| September 2022  | POLYPLEX        | Polyplex Corporation Ltd.                |
+| August 2022     | SOTL            | Savita Oil Technologies Ltd.             |
+| July 2022       | AUBANK          | AU Small Finance Bank Ltd.               |
+| June 2022       | BOM: 750646     | Deepak fertilizer and petrochemical Ltd. |
+| May 2022        | NSE: BSE        | BSE Ltd.                                 |
+| April 2022      | NSE: SOLARINDS  | Solar Industries Ltd.                    |
+| March 2022      | NSE: TATASTEEL  | Tata Steel Ltd.                          |
+| January 2022    | NSE: HAPPSTMNDS | Happiest Minds Ltd.                      |
+| November 2021   | NSE: DEVYANI    | Devyani International Ltd.               |
+| October 2021    | NSE: HIL        | HIL Ltd.                                 |
+| September 2021  | NSE: AFFLE      | Affle India Ltd.                         |
+| August 2021     | NSE: METROPOLIS | Metropolis Healthcare Ltd.               |
+| July 2021       | NSE: NMDC       | NMDC Ltd.                                |
+| June 2021       | NSE: AARTIIND   | Aarti Industries Ltd.                    |
+| May 2021        | NSE: ALKYLAMINE | Alkyl Amines Ltd.                        |
+| April 2021      | NSE: DIXON      | Dixon Technologies Ltd.                  |
+| March 2021      | NSE: HDFCLIFE   | HDFC Life Insurance Company Ltd.         |
+| February 2021   | NSE: ULTRACEMCO | Ultratech Cement Ltd.                    |
+| January 2021    | NSE: ENDURANCE  | Endurance Technologies Ltd.              |
+| October         | REC             |                                          |
+| Sep             | NSE: SBILIFE    | SBI Life                                 |
+| December 2020   | NSE: BHARTIARTL | Bharti Airtel                            |

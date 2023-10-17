@@ -74,5 +74,6 @@ sudo apt-get install fonts-cascadia-code
 - [Freecode](https://www.youtube.com/watch?v=WPqXP_kLzpo&t=1549s)
 - [Cascadia Code Font](https://github.com/microsoft/cascadia-code)
 - [VS Code Tricks & Tips](https://www.youtube.com/watch?v=4NfFFsQC77M&list=PLkwxH9e_vrAJshxiMo6gIavTr5kYsjPs7)
+- [Snippet Generator](https://snippet-generator.app) : copy paste the conde in VS-Code Settings/User Snippet/vue.json
 
 [![Audi R8](http://img.youtube.com/vi/KOxbO0EI4MA/0.jpg)](https://www.youtube.com/watch?v=KOxbO0EI4MA "Audi R8")

@@ -18,8 +18,17 @@
 
 ```bash
 npm install knex --save
+knex init
 knex migrate:make migration_name
 knex migrate:latest
+knex migrate:rollback
+knex migrate:list
+knex migrate:up
+knex migrate:up 001_migration_name.js
+knex migrate:down
+knex migrate:down 001_migration_name.js
+knex seed:make seed_name
+knex seed:runknex seed:run --specific=seed-filename.js --specific=another-seed-filename.js
 ```
 
 ## Controller :
@@ -43,5 +52,5 @@ module.exports = new PersonController();
 
 ## Links
 
-(Knex)[https://github.com/productioncoder/knexjs-tutorial/blob/master/controller/person.js]
-(knex-Objections)[https://github.com/productioncoder/objection-js-tutorial/blob/main/controller/user.js]
+- [Knex](https://github.com/productioncoder/knexjs-tutorial/blob/master/controller/person.js)
+- [knex-Objections](https://github.com/productioncoder/objection-js-tutorial/blob/main/controller/user.js)

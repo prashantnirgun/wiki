@@ -29,6 +29,44 @@
 
 Node version Manager if you want to use different node version
 
+### Installation
+
+#### Download
+
+```
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+```
+
+#### Update .bashrc or .zshrc
+
+```
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+```
+
+#### Verify
+
+```
+command -v nvm
+```
+
+#### .nvrmrc
+
+If the file is present then you can just use nvm use it will automatically load the correct version. Content of the file is as follows.
+
+```
+V16.0.0
+```
+
+| Command            | Explanation                                    |
+| ------------------ | ---------------------------------------------- |
+| nvm install node   | "node" is an alias for the latest version      |
+| nvm install 16.0.0 | To install a specific version of node          |
+| nvm ls-remote      | You can list available versions using          |
+| nvm ls             | If you want to see what versions are installed |
+| nvm use 16         | To use V16                                     |
+| nvm use            | read .nvmrc and load the correct version       |
+
 ## Global Packages
 
 ```bash

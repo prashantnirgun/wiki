@@ -181,3 +181,14 @@ icongenie verify
 is a relative asset path and will be resolved by Webpack as a module dependency.
 
 Because logo.png is not JavaScript, when treated as a module dependency, we need to use url-loader and file-loader to process it. Quasar CLI has already configured these webpack loaders for you, so you basically get features such as filename fingerprinting and conditional base64 inlining for free, while being able to use relative/module paths without worrying about deployment.
+
+```
+yarn create quasar
+yarn add pinia-plugin-persistedstate
+yarn quasar new store global
+yarn quasar ext add @quasar/dotenv
+yarn add @quasar/app
+yarn add @vuelidate/core @vuelidate/validators
+yarn add moment
+yarn add vuedraggable@next
+```

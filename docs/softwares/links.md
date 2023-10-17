@@ -7,6 +7,7 @@
 ## Forums
 
 - [Discord](https://discord.com/channels/386496112074424340/386498741902901248)
+- [Whatsapp](https://api.whatsapp.com/send/?phone=91)
 
 ## Font
 
@@ -17,7 +18,8 @@
 
 ## Images
 
-- [Plaeholder](https://placeimg.com/)
+- [Place Image](https://placeimg.com/)
+- [Picsum](https://picsum.photos/)
 - [Image Compressor](https://imagecompressor.com/)
 - [Freepik](https://www.freepik.com/)
 - [Fake Email](https://www.fakemail.net/)
@@ -27,3 +29,8 @@
 - [Saucellabs](https://saucelabs.com/)
 - [Browser Stack](https://www.browserstack.com/)
 - [Cypress](https://www.cypress.io/)
+
+Stocks
+
+- [Instafinancials](https://www.instafinancials.com/)
+- [Tofler](https://www.tofler.in/)

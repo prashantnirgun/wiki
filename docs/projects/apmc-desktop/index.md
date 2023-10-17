@@ -4,6 +4,10 @@
 
 ![Font](/images/diagram/dhada-book.png "Week View" =800x600)
 
+## Links
+
+- [Datwindow](./datawindow.md)
+
 ## Finalisation Queries
 
 ```sql
@@ -106,5 +110,5 @@ FROM sales_bill where co_id = @co_id and doc_dt BETWEEN @start_date AND @end_dat
 select a.co_id, a.ord_no, a.doc_dt, a.customer_id, a.sales, b.sales, a.sales - b.sales as diff
 from sales_bill a JOIN (select co_id, doc_dt, customer_id, sum(amount)as sales from sales_dtl group by co_id, doc_dt, customer_id) as b
 ON (a.co_id = b.co_id and a.doc_dt = b.doc_dt aND a.customer_id = b.customer_id)
-where a.co_id = 1 having diff = 0.00
+where a.co_id = 1 having diff <> 0.00 ;
 ```

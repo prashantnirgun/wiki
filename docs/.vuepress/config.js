@@ -32,6 +32,21 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
+
+      // {
+      //   text: "Group 2",
+      //   items: [
+      //     { text: "Power Builder", link: "/programing/power-builder/" },
+      //     {
+      //       text: "Group",
+      //       link: "/",
+      //       items: [
+      //         { text: "JavaScript", link: "/programing/javascript/" },
+      //         { text: "Node", link: "/programing/node/" },
+      //       ],
+      //     },
+      //   ],
+      // },
       {
         text: "Programing",
         items: [
@@ -45,7 +60,10 @@ module.exports = {
           { text: "NPM", link: "/programing/npm/" },
           { text: "Feathers", link: "/programing/feathers/" },
           { text: "Nuxt", link: "/programing/nuxt/" },
+          { text: "ES6", link: "/programing/es6/" },
           { text: "TypeScript", link: "/programing/typescript/" },
+          { text: "Vuelidate", link: "/programing/vuelidate/" },
+          { text: "HTML", link: "/programing/html/" },
         ],
       },
       {
@@ -61,19 +79,10 @@ module.exports = {
       {
         text: "Database",
         items: [
-          { text: "MySQL", link: "/database/mysql/" },
+          { text: "Kenx", link: "/database/knex/" },
           { text: "MongoDB", link: "/database/mongo/" },
         ],
       },
-
-      /*
-            { text : 'Projects', items: [
-              { text: 'APMC Desktop', link: '/projects/apmc-desktop/'},
-              { text: 'Credit Society', link : '/projects/credit-society/'},
-              { text: 'Retail Desktop', link: '/projects/retail-desktop/'},
-              { text: 'E-Commerce', link: '/projects/ecommerce/'}
-            ]},
-            */
       {
         text: "Editors",
         items: [
@@ -83,6 +92,12 @@ module.exports = {
           { text: "VS Code", link: "/editors/vs-code/" },
         ],
       },
+
+      {
+        text: "Misc",
+        items: [{ text: "Accounting Entries", link: "/misc/accounts/" }],
+      },
+
       { text: "About Me", link: "/about" },
     ],
     sidebar: [
@@ -90,7 +105,7 @@ module.exports = {
         title: "Projects",
         collapsable: false,
         children: [
-          "/projects/apmc-desktop",
+          "/projects/apmc-desktop/",
           "/projects/credit-society",
           "/projects/retail-desktop",
           "/projects/ecommerce",

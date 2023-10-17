@@ -1,5 +1,11 @@
 # Nuxt.js
 
+- npx nuxi@latest init <project-name>
+- cd <project-name>
+- yarn add quasar @quasar/extras
+- yarn add --dev nuxt-quasar-ui
+- yarn dev -o
+
 ## Register Services
 
 01 create file in client/api/student-plan-subscriptions.js
@@ -41,4 +47,3 @@ export default (context, inject) => {
 ```
 let rsp = await this.$api.studentPlanSubscriptions.create(data);
 ```
-
