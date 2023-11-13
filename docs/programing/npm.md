@@ -52,10 +52,10 @@ command -v nvm
 
 #### .nvrmrc
 
-If the file is present then you can just use nvm use it will automatically load the correct version. Content of the file is as follows.
+If the file is present then you can just use nvm use it will automatically load the correct version. Content of the file is as follows. To create the file
 
 ```
-V16.0.0
+node -v > .nvmrc
 ```
 
 | Command            | Explanation                                    |
